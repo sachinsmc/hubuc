@@ -2,6 +2,6 @@ package main
 
 import "github.com/sachinsmc/hubuc-task/cmd"
 
-func main()  {
+func main() {
 	cmd.Run()
 }

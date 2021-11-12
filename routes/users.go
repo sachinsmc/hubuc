@@ -7,8 +7,7 @@ import (
 	"go.uber.org/zap"
 )
 
-
-func CreateUser(c *fiber.Ctx) error  {
+func CreateUser(c *fiber.Ctx) error {
 	logger, _ := zap.NewProduction()
 	defer logger.Sync()
 

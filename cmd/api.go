@@ -6,7 +6,7 @@ import (
 )
 
 // Run function will create API server
-func Run()  {
+func Run() {
 	app := fiber.New()
 
 	routes.Setup(app)

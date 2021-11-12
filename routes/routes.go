@@ -26,5 +26,4 @@ func Setup(app *fiber.App) {
 
 	users.Post("/", CreateUser)
 
-
 }

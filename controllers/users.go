@@ -11,10 +11,9 @@ import (
 var validate *validator.Validate
 
 type Response struct {
-	Message string `json:"message"`
-	User model.User `json:"user"`
+	Message string     `json:"message"`
+	User    model.User `json:"user"`
 }
-
 
 func Add(u *model.User) Response {
 	u.ID = uuid.New()
@@ -30,7 +29,7 @@ func Add(u *model.User) Response {
 			fmt.Println(err.StructField())
 			return Response{
 				Message: err.StructField() + " is required or invalid",
-				User: *u,
+				User:    *u,
 			}
 		}
 	}
@@ -43,6 +42,6 @@ func Add(u *model.User) Response {
 
 	return Response{
 		Message: "User created successfully",
-		User: *u,
+		User:    *u,
 	}
 }
